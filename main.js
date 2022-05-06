@@ -7,8 +7,23 @@ const overlay = document.getElementById('overlay');
 const btnClose = document.getElementById('btn-close');
 
 area.addEventListener('click', e => {
-    if (e.target.className = 'box') {
-        move % 2 === 0 ? e.target.innerHTML = 'X' : e.target.innerHTML = 'O';
+    if (e.target.innerHTML === '') {
+        // move % 2 === 0 ? e.target.innerHTML = 'X' : e.target.innerHTML = 'O';
+        // e.target.style.color = 'rgb(85,107,47)';
+        // e.target.style.backgroundColor = 'rgb(0,255,127)';
+        // e.target.style.pointerEvents = 'none';
+        if (move % 2 === 0) {
+            e.target.innerHTML = 'X';
+            e.target.style.color = 'rgb(105,105,105)';
+            e.target.style.backgroundColor = 'rgb(250,128,114)';
+            e.target.style.pointerEvents = 'none';
+
+        } else {
+            e.target.innerHTML = 'O';
+            e.target.style.color = 'rgb(85,107,47)';
+            e.target.style.backgroundColor = 'rgb(0,255,127)';
+            e.target.style.pointerEvents = 'none';
+        }
         move++;
         check();
     }
