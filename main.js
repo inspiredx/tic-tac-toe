@@ -45,19 +45,22 @@ const check = () => {
         if (
             boxes[arr[i][0]].innerHTML == 'X' && boxes[arr[i][1]].innerHTML == 'X' && boxes[arr[i][2]].innerHTML == 'X'
         ) {
-            result = 'крестики';
+            result = 'Крестики';
             preResult(result);
         } else if (
             boxes[arr[i][0]].innerHTML == 'O' && boxes[arr[i][1]].innerHTML == 'O' && boxes[arr[i][2]].innerHTML == 'O'
         ) {
-            result = 'нолики';
+            result = 'Нолики';
+            preResult(result);
+        } else if (move == 9) {
+            result = 'Ничья';
             preResult(result);
         }
     }
 }
 
 const preResult = winner => {
-    contentWrapper.innerHTML = `Победили ${winner} !`;
+    contentWrapper.innerHTML = `Победитель: ${winner} !`;
     resultWrapper.style.display = 'block';
 }
 
