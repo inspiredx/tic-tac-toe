@@ -46,10 +46,11 @@ const preResult = winner => {
     resultWrapper.style.display = 'block';
 }
 
-const closeModal = () => {
+let closeModal = () => {
     resultWrapper.style.display = 'none';
     location.reload()
+
 }
 
-overlay.addEventListener('click', closeModal());
-btnClose.addEventListener('click', closeModal());
+overlay.addEventListener('click', closeModal);
+btnClose.addEventListener('click', closeModal);
