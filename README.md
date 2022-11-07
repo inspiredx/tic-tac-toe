@@ -1,3 +1,3 @@
 # tic-tac-toe
 
-Игра крестики-нолики на нативном JavaScript
+Tic-tac-toe made with native JavaScript
